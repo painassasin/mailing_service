@@ -1,0 +1,56 @@
+[tool.poetry]
+name = 'mailing-service'
+version = '0.1.0'
+description = ''
+authors = ['Vadim Meshcheryakov <painassasin@icloud.com>']
+readme = 'README.md'
+
+[tool.poetry.dependencies]
+python = '^3.11'
+django = '<5'
+django-environ = '^0.11.2'
+psycopg2-binary = '^2.9.9'
+celery = '^5.3.6'
+redis = "^5.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = '^5.13.2'
+black = '^23.12.0'
+ipython = '^8.18.1'
+pytest-django = '^4.7.0'
+pytest-freezegun = '^0.4.2'
+pytest-mock = "^3.12.0"
+
+[build-system]
+requires = ['poetry-core']
+build-backend = 'poetry.core.masonry.api'
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+skip-magic-trailing-coma = true
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.venv
+  | migrations
+)/
+'''
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+use_parentheses = true
+line_length = 120
+skip_glob = [
+    '**/migrations/**',
+    '.venv',
+]
+combine_as_imports = true
+combine_star = true
+known_first_party = 'config,mailing'
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = 'config.settings'
+python_files = ['test_*.py', '*_test.py']

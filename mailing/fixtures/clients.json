@@ -1,0 +1,38 @@
+[
+    {
+        "model": "mailing.client",
+        "pk": 1,
+        "fields": {
+            "email": "lcaldwell@example.org",
+            "fio": "Glenn Hunter",
+            "comment": "Sing save benefit crime firm address sing sure."
+        }
+    },
+    {
+        "model": "mailing.client",
+        "pk": 2,
+        "fields": {
+            "email": "mmartinez@example.com",
+            "fio": "Tommy Martin",
+            "comment": "Feel either news room knowledge song."
+        }
+    },
+    {
+        "model": "mailing.client",
+        "pk": 3,
+        "fields": {
+            "email": "wilsonmonica@example.org",
+            "fio": "Peter Estrada",
+            "comment": ""
+        }
+    },
+    {
+        "model": "mailing.client",
+        "pk": 4,
+        "fields": {
+            "email": "anthonyharris@example.com",
+            "fio": "Joshua Grant",
+            "comment": ""
+        }
+    }
+]
